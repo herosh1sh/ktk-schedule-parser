@@ -1,0 +1,15 @@
+services:
+  bot:
+    build: .
+    container_name: ktk-schedule-bot
+    restart: unless-stopped
+    init: true
+    hostname: ktk-bot
+    env_file: .env
+    environment:
+      TZ: Asia/Yeaketerinburg
+    volumes:
+      - bot_data:/data
+
+volumes:
+  bot_data:

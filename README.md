@@ -52,9 +52,12 @@ sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin dock
 ```
 cd ktk-schedule-parser
 ```
+Создаем там .env и прописываем данное значение:
+```
+BOT_TOKEN=ваш токен
+```
 После выполняем данные команды для Docker'а:
 ```
 docker compose up -d -build && docker compose logs -f -t
-docker compose restart (на всякий случай)
 ```
 После выполненных всех команд бот у вас должен запуститься, а парсер выдать в логах сообщение, что ему удалось спрасить расписание в .json файл
